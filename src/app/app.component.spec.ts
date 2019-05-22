@@ -1,3 +1,6 @@
+import { NavListComponent } from './global/app-header/nav-list/nav-list.component';
+import { AppFooterComponent } from './global/app-footer/app-footer.component';
+import { AppHeaderComponent } from './global/app-header/app-header.component';
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
@@ -9,7 +12,10 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        AppHeaderComponent,
+        AppFooterComponent,
+        NavListComponent
       ],
     }).compileComponents();
   }));

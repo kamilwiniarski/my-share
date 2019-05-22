@@ -18,7 +18,6 @@ import { GlobalModule } from './global/global.module';
     DashboardModule,
     AppRoutingModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

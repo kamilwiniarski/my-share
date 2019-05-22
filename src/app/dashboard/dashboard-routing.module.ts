@@ -1,30 +1,30 @@
 import { FriendOverviewComponent } from './friend-overview/friend-overview.component';
 import { CreateListComponent } from './create-list/create-list.component';
-import { DashboardContainerComponent } from './dashboard-container/dashboard-container.component';
+import { DashboardContainerComponent } from './dashboard-container.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ListOverviewComponent } from './list-overview/list-overview.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'dashboard',
     pathMatch: 'full',
     component: DashboardContainerComponent
   },
   {
-    path: 'list/create-new',
+    path: 'dashboard/list/create-new',
     component: CreateListComponent
   },
   {
-    path: 'friend/create-new',
+    path: 'dashboard/friend/create-new',
     component: CreateListComponent
   },
   {
-    path: 'friend/:id',
+    path: 'dashboard/friend/:id',
     component: FriendOverviewComponent
   },
   {
-    path: 'list/:id',
+    path: 'dashboard/list/:id',
     component: ListOverviewComponent
   }
 ];
