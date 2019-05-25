@@ -1,0 +1,15 @@
+<div class="create-form" [formGroup]="createForm">
+  <label for="name">Name: <input type="text" [formControlName]="'name'"></label>
+  <label for="email">Email: <input type="text" [formControlName]="'email'"></label>
+  <button class="btn-primary">Add list</button>
+  <div class="lists" formArrayName="lists">
+    <div class="single-list" [formGroupName]="idx" *ngFor="let item of lists.controls; index as idx"  >
+        <label for="label">Label: <dropdown-search></dropdown-search> <input type="hidden" formControlName="label"></label>
+        <label for="email">Share: <input type="text" formControlName="share"></label>
+        <button class="btn-remove">Remove list</button>
+      </div>
+  </div>
+</div>
+<button class="btn-primary">Add person</button>
+<button class="btn-secondary">Cancel</button>
+

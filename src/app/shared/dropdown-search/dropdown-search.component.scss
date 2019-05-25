@@ -1,0 +1,67 @@
+// @import '../../../../styles/variables';
+// @import '../../../../styles/typography';
+
+// :host {
+// 	position: relative;
+// 	width: 100%;
+// }
+
+// .query-field-container {
+// 	@include flex(row, nowrap, flex-start, center);
+
+// 	svg-icon {
+// 		/deep/ svg path {
+// 			fill: $grey-dark;
+// 		}
+// 	}
+
+
+// 	&.focused {
+// 		background-color: $background-open-list;
+// 		svg-icon /deep/ svg path {
+// 			fill: $background-dark;
+// 		}
+// 		.query-field {
+// 			color: $background-dark;
+// 			&::placeholder {
+// 				color: $background-dark;
+// 			}
+// 		}
+// 	}
+// }
+
+// .query-field {
+// 	@extend %description;
+// 	padding-left: 10px;
+// 	color: $grey-bright;
+// 	border: 0;
+// 	outline: 0;
+// 	background-color: transparent;
+// }
+
+// .results-list {
+// 	@extend %data-table;
+// 	@extend %firefox-scrollbar;
+// 	@include flex(column, nowrap, flex-start, flex-start);
+// 	overflow-x: hidden;
+// 	overflow-y: scroll;
+// 	position: absolute;
+// 	width: 174px;
+// 	max-height: 120px;
+// 	background-color: $background-dark;
+// }
+
+// .result-item {
+// 	width: 100%;
+// 	padding: 2px 0 2px 20px;
+// 	cursor: pointer;
+// 	transition: $transition-fast;
+
+// 	&:hover {
+// 		color: $grey-bright;
+// 		background-color: $background-dark-hover;
+// 	}
+// 	&:active {
+// 		background-color: $background-dark-active;
+// 	}
+// }

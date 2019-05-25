@@ -1,4 +1,4 @@
 <ul class="available-lists">
-  <li class="single-list" routerLink="/dashboard/list/0" routerLinkActive="active">List 1</li>
+  <li *ngFor="let list of tempLists; index as idx"  class="single-list" [routerLink]="['/dashboard/list', idx]" routerLinkActive="active">{{ list }}</li>
 </ul>
 <a  routerLink="/dashboard/list/create-new" routerLinkActive="active" class="btn-create">Add new list</a>

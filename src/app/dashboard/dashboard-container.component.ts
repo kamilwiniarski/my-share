@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardContainerComponent implements OnInit {
 
+  tempLists = ['list1', 'list2', 'list3'];
+  tempFriends = ['friend1', 'friend2', 'friend3'];
+
   constructor() { }
 
   ngOnInit() {

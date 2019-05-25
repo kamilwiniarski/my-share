@@ -10,6 +10,8 @@ import { AvailableFriendsComponent } from './available-friends/available-friends
 import { CreateListComponent } from './create-list/create-list.component';
 import { ListOverviewComponent } from './list-overview/list-overview.component';
 import { FriendOverviewComponent } from './friend-overview/friend-overview.component';
+import { CreateFriendComponent } from './create-friend/create-friend.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,12 @@ import { FriendOverviewComponent } from './friend-overview/friend-overview.compo
     AvailableFriendsComponent,
     CreateListComponent,
     ListOverviewComponent,
-    FriendOverviewComponent],
+    FriendOverviewComponent,
+    CreateFriendComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    SharedModule,
     DashboardRoutingModule,
     RouterModule
   ]

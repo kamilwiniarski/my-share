@@ -1,0 +1,8 @@
+<div class="query-field-container" [ngClass]="{'focused': showResults}">
+    <input (focus)="onFocus()" spellcheck="false" type="text" [formControl]="queryField" class="query-field" [placeholder]=" placeholder ? placeholder : 'Search'" />
+  </div>
+  <ul class="results-list" *ngIf="showResults && $results | async as results">
+    <li class="result-item" *ngFor="let result of results | slice:0:10">
+      {{ result.key }}
+    </li>
+  </ul>

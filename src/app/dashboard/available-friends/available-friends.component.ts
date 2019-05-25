@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'available-friends',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./available-friends.component.scss']
 })
 export class AvailableFriendsComponent implements OnInit {
+
+ @Input() tempFriends;
 
   constructor() { }
 

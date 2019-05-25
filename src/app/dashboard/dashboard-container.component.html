@@ -1,3 +1,7 @@
-<available-lists></available-lists>
-<available-friends></available-friends>
-<router-outlet></router-outlet>
+<div class="left-column">
+  <available-lists [tempLists]="tempLists"></available-lists>
+  <available-friends [tempFriends]="tempFriends"></available-friends>
+</div>
+<div class="right-column">
+  <router-outlet></router-outlet>
+</div>

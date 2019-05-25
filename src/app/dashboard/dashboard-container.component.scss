@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.left-column,
+.right-column {
+  flex: 1 1 40%;
+}
