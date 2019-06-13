@@ -1,3 +1,22 @@
-<p>
-  list-overview works!
-</p>
+<h3 class="title">List title</h3>
+<button class="add-expense-btn">Add new expense</button>
+<ul class="expenses-list">
+  <li class="expense" *ngFor="let expense of expenses">
+    <div class="expense-summary" (click)="toggleExpenseDetails(expense.id)">
+      <span class="expense-date">Date</span>
+      <span class="expense-label">{{ expense.label }}</span>
+      <span class="expense-value">{{ expense.value }}</span>
+      <button class="expense-edit">Edit</button>
+    </div>
+    <div class="expense-details" *ngIf="expenseDetails === expense.id" >
+      <ul class="users-list">
+        <li (click)="navigateToUser(user.id)" class="user" *ngFor="let user of expense.users">
+          <span class="user-name">{{ user.name }}</span>
+          <span class="user-share">{{ user.share }}</span>
+        </li>
+      </ul>
+    </div>
+  </li>
+</ul>
+<div class="list-sum">Sum</div>
+<button class="calculate-shares-button">Calculate list</button>
