@@ -12,6 +12,7 @@ import { ListOverviewComponent } from './list-overview/list-overview.component';
 import { FriendOverviewComponent } from './friend-overview/friend-overview.component';
 import { CreateFriendComponent } from './create-friend/create-friend.component';
 import { SharedModule } from '../shared/shared.module';
+import { ExpenseFormComponent } from './expense-form/expense-form.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SharedModule } from '../shared/shared.module';
     CreateListComponent,
     ListOverviewComponent,
     FriendOverviewComponent,
-    CreateFriendComponent],
+    CreateFriendComponent,
+    ExpenseFormComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,

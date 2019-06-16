@@ -1,3 +1,8 @@
-<p>
-  friend-overview works!
-</p>
+<h3 class="friend-name">{{ friend.name }}</h3>
+<ul class="lists">
+  <li class="list-details" *ngFor="let list of friend.lists" >
+    <span (click)="navigateToList(list.id)" class="list-label">{{ list.label }}</span>
+    <span class="list-share">{{ list.share }}</span>
+  </li>
+</ul>
+<button class="add-share-button">Add share</button>

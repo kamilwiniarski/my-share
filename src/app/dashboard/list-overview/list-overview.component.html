@@ -1,7 +1,7 @@
-<h3 class="title">List title</h3>
-<button class="add-expense-btn">Add new expense</button>
+<h3 class="title">{{ list.label}}</h3>
+<button class="add-expense-btn" *ngIf="!active"  (click)="addExpense()">Add new expense</button>
 <ul class="expenses-list">
-  <li class="expense" *ngFor="let expense of expenses">
+  <li class="expense" *ngFor="let expense of list.expenses">
     <div class="expense-summary" (click)="toggleExpenseDetails(expense.id)">
       <span class="expense-date">Date</span>
       <span class="expense-label">{{ expense.label }}</span>
@@ -10,13 +10,14 @@
     </div>
     <div class="expense-details" *ngIf="expenseDetails === expense.id" >
       <ul class="users-list">
-        <li (click)="navigateToUser(user.id)" class="user" *ngFor="let user of expense.users">
-          <span class="user-name">{{ user.name }}</span>
+        <li class="user" *ngFor="let user of expense.users">
+          <span (click)="navigateToUser(user.id)" class="user-name">{{ user.name }}</span>
           <span class="user-share">{{ user.share }}</span>
         </li>
       </ul>
     </div>
   </li>
 </ul>
+<expense-form *ngIf="active"></expense-form>
 <div class="list-sum">Sum</div>
 <button class="calculate-shares-button">Calculate list</button>
