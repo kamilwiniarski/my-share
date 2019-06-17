@@ -1,3 +1,4 @@
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExpenseFormComponent implements OnInit {
 
-  constructor() { }
+  expenseForm: FormGroup;
+
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
+    this.expenseForm = this.createExpenseForm();
+  }
+
+ private createExpenseForm(): FormGroup {
+    return this.formBuilder.group({
+      date: this.formBuilder.control(new Date()),
+      label: this.formBuilder.control(''),
+      enlistedIn: this.formBuilder.control(''),
+      users: this.formBuilder.array([])
+    });
   }
 
 }
